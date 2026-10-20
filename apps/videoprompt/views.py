@@ -152,11 +152,6 @@ def generate_prompt_ajax(request):
         return JsonResponse({'status': 'error', 'message': str(e)}, status=400)
     except Exception as e:
         return JsonResponse({'status': 'error', 'message': f'Error del servidor: {str(e)}'}, status=500)
-        
-    except VideoValidationError as e:
-        return JsonResponse({'status': 'error', 'message': str(e)}, status=400)
-    except Exception as e:
-        return JsonResponse({'status': 'error', 'message': f'Error del servidor: {str(e)}'}, status=500)
 
 
 @login_required
